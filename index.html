@@ -1,28 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download HotDays App</title>
     <style>
-        .download-btn {
-            background-color: #FF5722; /* High-energy color for HotDays */
+        /* Colorful Gradient Background */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             color: white;
-            padding: 15px 30px;
+            text-align: center;
+        }
+
+        /* Background Animation */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* The Pulsing Download Button */
+        .download-btn {
+            background-color: #ffffff;
+            color: #e73c7e;
+            padding: 20px 40px;
             text-decoration: none;
-            font-size: 20px;
-            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
             display: inline-block;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1);
+            background-color: #f0f0f0;
+        }
+
+        /* Pulse Animation Logic */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
         }
     </style>
 </head>
 <body>
 
-    <h1>Get the HotDays App</h1>
-    <p>Click below to download the latest APK for HotDays🔥</p>
-    <h2>It is safe to download & "Install anyway"</h2>
+    <div class="container">
+        <h1>🌡️HotDays🔥</h1>
+        <p>Ready to monitor the temperature?</p>
+        <h1>Get the HotDays App</h1>
+        <p>Click below to download the latest APK for HotDays🔥</p>
+        <h2> Click Download & 'Install anyway'</h2> 
+        <a href="HotDays.apk" download="HotDays.apk" class="download-btn">
+            DOWNLOAD APP
+        </a>
 
-    <a href="downloads/app-debug.apk" download="app-debug.apk" class="download-btn">
-        Download APK Now
-    </a>
+        <div class="footer-text">
+            Package: com.hotdays.myapp <br>
+            Version: 1.0.0
+        </div>
+    </div>
 
 </body>
 </html>
+
+
+    
+
+
